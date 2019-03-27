@@ -1,0 +1,19 @@
+body {
+    background-image: url('../../assets/images/gradient.jpg');
+}
+
+/* * {
+    color: white;
+} */
+
+button {
+    margin: 2px;
+    width: 200px;
+}
+
+#contentArea {
+    background-color: whitesmoke;
+    border: 2px solid darkgray;
+    padding: 50px;
+    margin: 50px 10px 50px 10px;
+}

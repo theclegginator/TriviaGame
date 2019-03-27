@@ -57,13 +57,14 @@ $( document ).ready(function() {
             clearInterval(timeRemaining); 
             // clear content area before re-establishing format.
             $("#contentArea").html("");
+            var bootstrapDiv = "<div class='row text-center justify-content-center'><div class='col justify-content-center'>";
             // Rebuid the content area with each new question because we clear it to show if the user was right or wrong after each guess.
-            $("#contentArea").append("<div class='row text-center justify-content-center'><div class='col justify-content-center'><h3 id='timeRemaining'></h3></div></div>");
-            $("#contentArea").append("<div class='row text-center justify-content-center'><div class='col justify-content-center'><h2 id='question'></h2></div></div>");
-            $("#contentArea").append("<div class='row text-center justify-content-center'><div class='col justify-content-center'><button id='option1'></button></div></div>");
-            $("#contentArea").append("<div class='row text-center justify-content-center'><div class='col justify-content-center'><button id='option2'></button></div></div>");
-            $("#contentArea").append("<div class='row text-center justify-content-center'><div class='col justify-content-center'><button id='option3'></button></div></div>");
-            $("#contentArea").append("<div class='row text-center justify-content-center'><div class='col justify-content-center'><button id='option4'></button></div></div>");
+            $("#contentArea").append(bootstrapDiv + "<h3 id='timeRemaining'></h3></div></div>");
+            $("#contentArea").append(bootstrapDiv + "<h2 id='question'></h2></div></div>");
+            $("#contentArea").append(bootstrapDiv + "<button type='button' class='btn btn-primary' id='option1'></button></div></div>");
+            $("#contentArea").append(bootstrapDiv + "<button type='button' class='btn btn-primary' id='option2'></button></div></div>");
+            $("#contentArea").append(bootstrapDiv + "<button type='button' class='btn btn-primary' id='option3'></button></div></div>");
+            $("#contentArea").append(bootstrapDiv + "<button type='button' class='btn btn-primary' id='option4'></button></div></div>");
             // use this to have a consistent index to associate questions and options.
             selector = Math.floor(questionsArr.length * Math.random()); 
             currentQuestion = questionsArr[selector].question;
@@ -151,12 +152,13 @@ $( document ).ready(function() {
         clearInterval(timeRemaining); 
         // clear content area before re-establishing format.
         $("#contentArea").html("");
+        var bootstrapDiv = "<div class='row text-center justify-content-center'><div class='col justify-content-center'>";
         // Rebuid the content area with each new question because we clear it to show if the user was right or wrong after each guess.
-        $("#contentArea").append("<div class='row text-center justify-content-center'><div class='col justify-content-center'><h3>The game has ended!</h3></div></div>");
-        $("#contentArea").append("<div class='row text-center justify-content-center'><div class='col justify-content-center'><h2>Let's see how you did.</h2></div></div>");
-        $("#contentArea").append("<div class='row text-center justify-content-center'><div class='col justify-content-center'><h4>Correct Answers: " + correct + "</h4></div></div>");
-        $("#contentArea").append("<div class='row text-center justify-content-center'><div class='col justify-content-center'><h4>Incorrect Answers: " + incorrect + "</h4></div></div>");
-        $("#contentArea").append("<div class='row text-center justify-content-center'><div class='col justify-content-center'><button id='start'>Start Game Over</button></div></div>");
+        $("#contentArea").append(bootstrapDiv + "<h3>The game has ended!</h3></div></div>");
+        $("#contentArea").append(bootstrapDiv + "<h2>Let's see how you did.</h2></div></div>");
+        $("#contentArea").append(bootstrapDiv + "<h4>Correct Answers: " + correct + "</h4></div></div>");
+        $("#contentArea").append(bootstrapDiv + "<h4>Incorrect Answers: " + incorrect + "</h4></div></div>");
+        $("#contentArea").append(bootstrapDiv + "<button type='button' id='start' class='btn btn-success'>Start Game Over</button></div></div>");
         // Allow user to start game over by clicking the start button
         $("#start").click(function(){
             gameStart();
