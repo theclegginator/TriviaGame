@@ -128,7 +128,7 @@ $( document ).ready(function() {
             // clear the content area to show whether the player got the question right or wrong.
             $("#contentArea").html("");
             // show that the user got the correct answer.
-            $("#contentArea").html("<div class='row text-center justify-content-center'><div class='col justify-content-center'><h3>Correct!</h3></div></div>");
+            $("#contentArea").html("<div class='row text-center justify-content-center'><div class='col justify-content-center'><h3 style='color: #1a8200;'>Correct!</h3></div></div>");
             // remove the current question from questionsArr
             questionsArr.splice(selector, 1);
             // wait a few seconds before showing the next question.
@@ -140,7 +140,7 @@ $( document ).ready(function() {
             // If time runs out, clear the content area to show the correct answer
             $("#contentArea").html("");
             // show that the user got the the wrong answer and show them the correct one.
-            $("#contentArea").html("<div class='row text-center justify-content-center'><div class='col justify-content-center'><h3>" + "Incorrect! The right answer was " + answer + "!" + "</h3></div></div>");
+            $("#contentArea").html("<div class='row text-center justify-content-center'><div class='col justify-content-center'>" + "<h3 style='color: #b70000;'>Incorrect!</h3><h3>The correct answer was:</h3>" + "<h3 style='color: #1d8fa5;'>" + answer + "</h3>" + "</div></div>");
             // remove the current question from questionsArr
             questionsArr.splice(selector, 1);
             // wait a few seconds before showing the next question.
@@ -154,8 +154,8 @@ $( document ).ready(function() {
         $("#contentArea").html("");
         var bootstrapDiv = "<div class='row text-center justify-content-center'><div class='col justify-content-center'>";
         // Rebuid the content area with each new question because we clear it to show if the user was right or wrong after each guess.
-        $("#contentArea").append(bootstrapDiv + "<h3>The game has ended!</h3></div></div>");
-        $("#contentArea").append(bootstrapDiv + "<h2>Let's see how you did.</h2></div></div>");
+        $("#contentArea").append(bootstrapDiv + "<h2>The game has ended!</h2></div></div>");
+        $("#contentArea").append(bootstrapDiv + "<h3 style='color: #1d8fa5;'>Let's see how you did.</h3></div></div>");
         $("#contentArea").append(bootstrapDiv + "<h4>Correct Answers: " + correct + "</h4></div></div>");
         $("#contentArea").append(bootstrapDiv + "<h4>Incorrect Answers: " + incorrect + "</h4></div></div>");
         $("#contentArea").append(bootstrapDiv + "<button type='button' id='start' class='btn btn-success'>Start Game Over</button></div></div>");
