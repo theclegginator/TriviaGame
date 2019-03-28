@@ -2,10 +2,6 @@ body {
     background-image: url('../../assets/images/gradient.jpg');
 }
 
-/* * {
-    color: white;
-} */
-
 button {
     margin: 2px;
     width: 200px;
@@ -16,4 +12,14 @@ button {
     border: 2px solid darkgray;
     padding: 50px;
     margin: 50px 10px 50px 10px;
+}
+
+#triviaBanner {
+    border: 2px solid darkgray;
+    margin-bottom: 20px;
+}
+
+#start {
+    margin: 10px 0 20px 0;
+    width: 70%;
 }
