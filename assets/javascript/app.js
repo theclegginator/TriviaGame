@@ -21,21 +21,21 @@ $( document ).ready(function() {
         // Array of question objects. Reset between games, as we eliminate entries from the question array to keep order random.
         //Each array item has 4 answer options, the question itself, and a variable to identify the actual answer.
         questionsArr = [
-            {question: "In 'The Race', what is the name of Jerry's high school racing nemesis?",
+            {question: "In \"The Race\", what is the name of Jerry's high school racing nemesis?",
                 option1: "Duncan Meyer",
                 option2: "Kramer",
                 option3: "Elaine Benes",
                 option4: "Jackie Chiles",
                 answer: "Duncan Meyer"
             },
-            {question: "What number of dates requires a 'face-to-face' break-up, according to Jerry?",
+            {question: "What number of dates requires a \"face-to-face\" break-up, according to Jerry?",
                 option1: "Two",
                 option2: "Five",
                 option3: "Seven",
                 option4: "Ten",
                 answer: "Seven"
             },
-            {question: "In 'The Comeback', what was the store out of?",
+            {question: "In \"The Comeback\", what was the store out of?",
                 option1: "Toilets",
                 option2: "Jerks",
                 option3: "Shrimp",
@@ -56,7 +56,7 @@ $( document ).ready(function() {
                 option4: "Cars",
                 answer: "Coffee Tables"
             },
-            {question: "Jerry had a favorite yellow t-shirt. What did he call it?",
+            {question: "Jerry had a favorite yellow T-shirt. What did he call it?",
                 option1: "Old Faithful",
                 option2: "Golden Boy",
                 option3: "Baby Blue",
